@@ -1,0 +1,172 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Explore Challenges | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/challenges.css">
+</head>
+
+<body data-page="challenges" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">FIND YOUR NEXT STEP</span>
+                        <h1>Explore Challenges</h1>
+                        <p>
+                            Temukan tantangan yang sesuai dengan tujuan, waktu, dan ritmemu.
+                        </p>
+                    </div>
+
+                    <div class="heading-actions">
+                        <a href="growth-plan.html" class="btn btn-secondary">
+                            Growth Plan ↗
+                        </a>
+                    </div>
+                </div>
+
+                <section class="featured-challenge card">
+                    <div>
+                        <span class="badge lavender">FEATURED PATH</span>
+                        <h2 style="margin-top:12px">Reading & Critical Thinking</h2>
+                        <p>
+                            Mulai dari kebiasaan membaca, lanjutkan ke refleksi, lalu asah cara berpikir kritis.
+                        </p>
+                        <a href="growth-path.html?id=reading-path" class="btn btn-dark">
+                            Lihat Growth Path ↗
+                        </a>
+                    </div>
+
+                </section>
+
+                <section class="section">
+                    <div class="toolbar">
+                        <input
+                            id="challenge-search"
+                            class="search-input"
+                            type="search"
+                            placeholder="Cari challenge..."
+                            aria-label="Cari challenge"
+                        >
+
+                        <select
+                            id="difficulty-filter"
+                            class="search-input"
+                            style="max-width:170px"
+                        >
+                            <option value="all">Semua tingkat</option>
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                        </select>
+
+                        <select
+                            id="duration-filter"
+                            class="search-input"
+                            style="max-width:170px"
+                        >
+                            <option value="all">Semua durasi</option>
+                            <option value="short">1–3 hari</option>
+                            <option value="medium">4–7 hari</option>
+                            <option value="long">Lebih dari 7 hari</option>
+                        </select>
+
+                        <select
+                            id="sort-filter"
+                            class="search-input"
+                            style="max-width:180px"
+                        >
+                            <option value="recommended">Direkomendasikan</option>
+                            <option value="duration">Durasi terpendek</option>
+                            <option value="xp">XP tertinggi</option>
+                        </select>
+                    </div>
+
+                    <div class="chips" id="category-filters">
+                        <button
+                            class="chip active"
+                            data-category="all"
+                            aria-pressed="true"
+                        >
+                            Semua
+                        </button>
+                        <button class="chip" data-category="learning">
+                            Learning & Focus
+                        </button>
+                        <button class="chip" data-category="creative">
+                            Creative & Digital Skills
+                        </button>
+                        <button class="chip" data-category="healthy">
+                            Healthy Habits
+                        </button>
+                    </div>
+
+                    <div class="between section" style="margin-bottom:14px">
+                        <h2 class="mb-0" style="font-size:22px">Semua Challenge</h2>
+                        <span class="challenge-count" id="challenge-count">
+                            Memuat challenge...
+                        </span>
+                    </div>
+
+                    <div class="challenge-grid" id="challenge-grid"></div>
+                    <div id="challenge-empty" class="section hidden"></div>
+                </section>
+
+                <section class="section">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">NEED A DIRECTION?</span>
+                            <h2>Jelajahi Growth Path</h2>
+                            <p>Ikuti jalur yang menyatukan beberapa challenge.</p>
+                        </div>
+
+                        <a href="growth-plan.html" class="link">
+                            Lihat rencana ↗
+                        </a>
+                    </div>
+
+                    <div class="grid grid-3" id="challenge-path-grid"></div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/challenges.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+
+    <title>Masuk | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="login-page">
+    <div class="login-frame">
+        <section class="login-visual">
+            <a class="brand" href="index.html">
+                <img src="assets/images/logo/levelup-logo-full.png" alt="LevelUp">
+            </a>
+
+            <div>
+                <span class="eyebrow">YOUR PERSONAL GROWTH SPACE</span>
+                <h1>
+                    Grow with<br>
+                    purpose.<br>
+                    <em>Progress with proof.</em>
+                </h1>
+                <p>
+                    Langkah kecil yang kamu lakukan hari ini adalah bagian dari versi dirimu yang sedang kamu bangun.
+                </p>
+            </div>
+
+            <img
+                src="assets/images/illustrations/reading.svg"
+                alt="Ilustrasi membaca dan belajar"
+            >
+
+            <div class="small muted">
+                Setiap challenge punya tujuan. Setiap pencapaian punya arti.
+            </div>
+        </section>
+
+        <section class="login-side">
+            <form class="login-form" id="login-form" novalidate>
+                <div class="brand">
+                    <div class="eyebrow">WELCOME BACK</div>
+                    <h2>Senang melihatmu kembali.</h2>
+                    <p>Lanjutkan perjalanan pengembangan dirimu.</p>
+                </div>
+
+                <div
+                    id="login-message"
+                    class="notice error hidden"
+                    role="alert"
+                ></div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="nama@email.com"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Masukkan password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div class="between" style="margin:8px 0 20px">
+                    <label class="checkbox-row">
+                        <input type="checkbox" id="show-password">
+                        Tampilkan password
+                    </label>
+                    <span class="small muted">Prototype demo</span>
+                </div>
+
+                <button
+                    class="btn btn-dark btn-block"
+                    type="submit"
+                    id="login-submit"
+                >
+                    Masuk ke LevelUp <span>↗</span>
+                </button>
+
+                <div class="divider"></div>
+
+                <div class="between">
+                    <strong class="small">Coba akun demo</strong>
+                    <span class="small muted">Pilih role</span>
+                </div>
+
+                <div class="login-demo">
+                    <button
+                        class="demo-choice"
+                        type="button"
+                        data-demo-login="user"
+                    >
+                        <strong>👤 Demo User</strong>
+                        <span>user@levelup.id</span>
+                    </button>
+
+                    <button
+                        class="demo-choice"
+                        type="button"
+                        data-demo-login="admin"
+                    >
+                        <strong>🛡️ Demo Admin</strong>
+                        <span>admin@levelup.id</span>
+                    </button>
+                </div>
+
+                <p class="small muted" style="margin-top:20px">
+                    Versi frontend untuk demonstrasi. Data disimpan secara lokal di browser.
+                </p>
+            </form>
+        </section>
+    </div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/login.js"></script>
+</body>
+</html>

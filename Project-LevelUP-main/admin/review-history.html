@@ -1,0 +1,122 @@
+```html
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+
+    <title>Review History | LevelUp</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body data-page="admin-review-history" data-require-role="admin">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div class="admin-heading">
+                        <div>
+                            <span class="eyebrow">DECISION LOG</span>
+                            <h1>Review History</h1>
+                            <p>
+                                Jejak keputusan membantu menjaga konsistensi dan akuntabilitas pemeriksaan.
+                            </p>
+                        </div>
+
+                        <span class="admin-marker">ADMIN</span>
+                    </div>
+                </div>
+
+                <section class="grid grid-3">
+                    <article class="card stat-card card-green">
+                        <div class="stat-label">TOTAL KEPUTUSAN</div>
+                        <div class="stat-value" id="history-total">0</div>
+                    </article>
+
+                    <article class="card stat-card card-blue">
+                        <div class="stat-label">APPROVED</div>
+                        <div class="stat-value" id="history-approved">0</div>
+                    </article>
+
+                    <article class="card stat-card card-peach">
+                        <div class="stat-label">REJECTED</div>
+                        <div class="stat-value" id="history-rejected">0</div>
+                    </article>
+                </section>
+
+                <section class="section">
+                    <div class="toolbar">
+                        <input
+                            class="search-input"
+                            id="history-search"
+                            type="search"
+                            placeholder="Cari submission, user, challenge..."
+                        >
+
+                        <select
+                            class="search-input"
+                            id="history-decision"
+                            style="max-width: 180px"
+                        >
+                            <option value="all">Semua keputusan</option>
+                            <option value="approved">Approved</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Waktu</th>
+                                    <th>Submission</th>
+                                    <th>User</th>
+                                    <th>Challenge</th>
+                                    <th>Reviewer</th>
+                                    <th>Keputusan</th>
+                                    <th>Alasan</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="history-table"></tbody>
+                        </table>
+                    </div>
+
+                    <div id="history-empty" class="section hidden"></div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div class="toast-root" id="toast-root" aria-live="polite"></div>
+
+    <script defer src="../js/storage.js"></script>
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/auth.js"></script>
+    <script defer src="../js/ui.js"></script>
+    <script defer src="../js/progression.js"></script>
+    <script defer src="../js/admin/review-history.js"></script>
+</body>
+</html>
+```

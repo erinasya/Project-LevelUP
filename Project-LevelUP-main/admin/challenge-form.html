@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+
+    <title>Create / Edit Challenge | LevelUp</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body data-page="admin-challenge-form" data-require-role="admin">
+    <div class="app-frame">
+        <div class="app-surface">
+
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">CHALLENGE BUILDER</span>
+
+                        <h1 id="admin-challenge-form-title">
+                            Buat Challenge
+                        </h1>
+
+                        <p>
+                            Tentukan aktivitas, kriteria, bukti, dan manfaat
+                            sebelum dipublikasikan.
+                        </p>
+                    </div>
+
+                    <a href="challenges.html" class="btn btn-ghost">
+                        ← Kembali
+                    </a>
+                </div>
+
+                <form id="admin-challenge-form" class="admin-form-grid">
+
+                    <div class="flow">
+
+                        <section class="form-section">
+                            <div class="form-section-title">
+                                <span class="number">01</span>
+
+                                <div>
+                                    <h2>Informasi dasar</h2>
+
+                                    <p class="small mb-0">
+                                        Nama dan tujuan yang akan dilihat
+                                        pengguna.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+
+                                <div class="field field-full">
+                                    <label for="challenge-title">
+                                        Nama challenge *
+                                    </label>
+
+                                    <input id="challenge-title" required>
+                                </div>
+
+                                <div class="field field-full">
+                                    <label for="challenge-description">
+                                        Deskripsi singkat *
+                                    </label>
+
+                                    <textarea
+                                        id="challenge-description"
+                                        required
+                                    ></textarea>
+                                </div>
+
+                                <div class="field">
+                                    <label for="challenge-category">
+                                        Kategori *
+                                    </label>
+
+                                    <select id="challenge-category">
+                                        <option value="learning">
+                                            Learning &amp; Focus
+                                        </option>
+
+                                        <option value="creative">
+                                            Creative &amp; Digital Skills
+                                        </option>
+
+                                        <option value="healthy">
+                                            Healthy Habits
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label for="challenge-difficulty">
+                                        Tingkat kesulitan
+                                    </label>
+
+                                    <select id="challenge-difficulty">
+                                        <option>Beginner</option>
+                                        <option>Intermediate</option>
+                                        <option>Advanced</option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label for="challenge-duration">
+                                        Durasi
+                                    </label>
+
+                                    <input
+                                        id="challenge-duration"
+                                        value="5 hari"
+                                    >
+                                </div>
+
+                                <div class="field">
+                                    <label for="challenge-xp">
+                                        XP reward
+                                    </label>
+
+                                    <input
+                                        id="challenge-xp"
+                                        type="number"
+                                        min="0"
+                                        value="80"
+                                    >
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section class="form-section">
+                            <div class="form-section-title">
+                                <span class="number">02</span>
+
+                                <div>
+                                    <h2>Objective &amp; tasks</h2>
+
+                                    <p class="small mb-0">
+                                        Jelaskan hasil yang ingin dicapai
+                                        dan langkahnya.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+
+                                <div class="field field-full">
+                                    <label for="challenge-objective">
+                                        Objective
+                                    </label>
+
+                                    <textarea
+                                        id="challenge-objective"
+                                        placeholder="Apa yang ingin dikembangkan?"
+                                    ></textarea>
+                                </div>
+
+                                <div class="field field-full">
+                                    <label for="challenge-tasks">
+                                        Tasks (satu tugas per baris)
+                                    </label>
+
+                                    <textarea
+                                        id="challenge-tasks"
+                                        placeholder="Pahami brief&#10;Kerjakan aktivitas&#10;Catat hasil"
+                                    ></textarea>
+                                </div>
+
+                                <div class="field field-full">
+                                    <label for="challenge-criteria">
+                                        Completion criteria *
+                                    </label>
+
+                                    <textarea
+                                        id="challenge-criteria"
+                                        required
+                                        placeholder="Apa syarat yang harus dipenuhi agar dianggap selesai?"
+                                    ></textarea>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section class="form-section">
+                            <div class="form-section-title">
+                                <span class="number">03</span>
+
+                                <div>
+                                    <h2>Proof &amp; verification</h2>
+
+                                    <p class="small mb-0">
+                                        Pilih bukti yang relevan dengan
+                                        jenis aktivitas.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="form-grid">
+
+                                <div class="field">
+                                    <label for="challenge-proof">
+                                        Proof method
+                                    </label>
+
+                                    <select id="challenge-proof">
+                                        <option>
+                                            Session log + reflection
+                                        </option>
+
+                                        <option>
+                                            Written reflection
+                                        </option>
+
+                                        <option>
+                                            Work artifact
+                                        </option>
+
+                                        <option>
+                                            Image + notes
+                                        </option>
+
+                                        <option>
+                                            Daily check-in
+                                        </option>
+
+                                        <option>
+                                            Project files or repository
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label for="challenge-verification">
+                                        Verification level
+                                    </label>
+
+                                    <select id="challenge-verification">
+                                        <option>System-checked</option>
+                                        <option>Assessor review</option>
+                                        <option>
+                                            Self-reported + spot check
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label for="challenge-path">
+                                        Growth Path
+                                    </label>
+
+                                    <select id="challenge-path">
+                                        <option value="reading-path">
+                                            Reading &amp; Critical Thinking
+                                        </option>
+
+                                        <option value="creative-path">
+                                            Creative Design Journey
+                                        </option>
+
+                                        <option value="healthy-path">
+                                            Healthy Habit Starter
+                                        </option>
+
+                                        <option value="coding-path">
+                                            Programming Foundation
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label for="challenge-stage">
+                                        Stage number
+                                    </label>
+
+                                    <input
+                                        id="challenge-stage"
+                                        type="number"
+                                        min="1"
+                                        value="1"
+                                    >
+                                </div>
+
+                                <div class="field field-full">
+                                    <label for="challenge-prerequisite">
+                                        Prerequisite challenge
+                                    </label>
+
+                                    <select id="challenge-prerequisite">
+                                        <option value="">Tidak ada</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section class="form-section">
+                            <div class="form-section-title">
+                                <span class="number">04</span>
+
+                                <div>
+                                    <h2>Publication</h2>
+
+                                    <p class="small mb-0">
+                                        Simpan sebagai draft atau
+                                        publikasikan.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="challenge-status">
+                                    Status
+                                </label>
+
+                                <select id="challenge-status">
+                                    <option value="draft">Draft</option>
+                                    <option value="active">Aktif</option>
+                                    <option value="archived">Archived</option>
+                                </select>
+                            </div>
+
+                            <div
+                                class="notice warning"
+                                style="margin-top: 14px;"
+                            >
+                                Sebelum publish, pastikan tujuan, kriteria
+                                penyelesaian, dan bukti sudah jelas.
+                            </div>
+                        </section>
+
+                        <div class="between">
+                            <a href="challenges.html" class="btn btn-ghost">
+                                Batal
+                            </a>
+
+                            <div class="heading-actions">
+                                <button
+                                    class="btn btn-secondary"
+                                    type="button"
+                                    id="save-challenge-draft"
+                                >
+                                    Simpan Draft
+                                </button>
+
+                                <button
+                                    class="btn btn-primary"
+                                    type="submit"
+                                >
+                                    Simpan Challenge ↗
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <aside class="flow admin-form-aside">
+
+                        <article class="card card-blue">
+                            <span class="eyebrow">DESIGN PRINCIPLE</span>
+
+                            <h3>Challenge yang baik</h3>
+
+                            <div class="criteria-list">
+
+                                <div class="criteria-row">
+                                    <span class="check">✓</span>
+                                    <span>
+                                        Tujuan spesifik dan realistis.
+                                    </span>
+                                </div>
+
+                                <div class="criteria-row">
+                                    <span class="check">✓</span>
+                                    <span>
+                                        Kriteria penyelesaian bisa dipahami.
+                                    </span>
+                                </div>
+
+                                <div class="criteria-row">
+                                    <span class="check">✓</span>
+                                    <span>
+                                        Bukti sesuai dengan aktivitas.
+                                    </span>
+                                </div>
+
+                                <div class="criteria-row">
+                                    <span class="check">✓</span>
+                                    <span>
+                                        Reward punya fungsi yang jelas.
+                                    </span>
+                                </div>
+
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <h3>Preview ringkas</h3>
+
+                            <div id="challenge-form-preview">
+                                <p class="small">
+                                    Isi informasi dasar untuk melihat preview.
+                                </p>
+                            </div>
+                        </article>
+
+                    </aside>
+
+                </form>
+
+            </main>
+
+            <footer class="app-footer"></footer>
+
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="../js/storage.js"></script>
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/auth.js"></script>
+    <script defer src="../js/ui.js"></script>
+    <script defer src="../js/progression.js"></script>
+    <script defer src="../js/admin/challenge-form.js"></script>
+</body>
+</html>

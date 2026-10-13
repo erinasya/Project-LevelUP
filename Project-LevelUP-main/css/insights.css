@@ -1,0 +1,43 @@
+.insights-top {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 18px;
+}
+
+.insight-callout {
+    background: linear-gradient(130deg, #E2F2FF, #F8F1D7);
+}
+
+.insight-callout .insight-big {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -.06em;
+}
+
+.chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-top: 15px;
+}
+
+.chart-legend span {
+    font-size: 10px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.chart-legend i {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: var(--pool);
+}
+
+@media (max-width: 780px) {
+    .insights-top {
+        grid-template-columns: 1fr;
+    }
+}

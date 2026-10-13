@@ -1,0 +1,49 @@
+.path-hero {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 20px;
+    align-items: center;
+    background: linear-gradient(120deg, #E7F3FF, #F5EAF7);
+    padding: 26px;
+}
+
+.path-hero img {
+    max-height: 205px;
+    justify-self: end;
+}
+
+.path-overview {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.mini-metric {
+    padding: 13px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .8);
+}
+
+.mini-metric strong {
+    display: block;
+    font-size: 19px;
+}
+
+.mini-metric span {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+@media (max-width: 780px) {
+    .path-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .path-hero img {
+        display: none;
+    }
+
+    .path-overview {
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,166 @@
+```html
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+
+    <title>Growth Path Builder | LevelUp</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body data-page="admin-growth-path-builder" data-require-role="admin">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">PATH DESIGNER</span>
+                        <h1 id="path-builder-title">Buat Growth Path</h1>
+                        <p>
+                            Susun tahapan yang masuk akal dan pastikan setiap stage memiliki challenge serta kriteria.
+                        </p>
+                    </div>
+
+                    <a href="growth-paths.html" class="btn btn-ghost">
+                        ← Kembali
+                    </a>
+                </div>
+
+                <form id="path-builder-form" class="flow">
+                    <section class="form-section">
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="path-name">Nama Growth Path *</label>
+                                <input
+                                    id="path-name"
+                                    required
+                                    placeholder="Contoh: Writing Journey"
+                                >
+                            </div>
+
+                            <div class="field">
+                                <label for="path-category-select">Kategori</label>
+                                <select id="path-category-select">
+                                    <option value="learning">Learning & Focus</option>
+                                    <option value="creative">Creative & Digital Skills</option>
+                                    <option value="healthy">Healthy Habits</option>
+                                </select>
+                            </div>
+
+                            <div class="field field-full">
+                                <label for="path-description-input">Deskripsi *</label>
+                                <textarea
+                                    id="path-description-input"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="field field-full">
+                                <label for="path-goal-input">Tujuan akhir</label>
+                                <textarea id="path-goal-input"></textarea>
+                            </div>
+
+                            <div class="field">
+                                <label for="path-duration-input">Estimasi durasi</label>
+                                <input
+                                    id="path-duration-input"
+                                    value="14 hari"
+                                >
+                            </div>
+
+                            <div class="field">
+                                <label for="path-status-input">Status</label>
+                                <select id="path-status-input">
+                                    <option value="draft">Draft</option>
+                                    <option value="active">Aktif</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <div class="section-head">
+                            <div>
+                                <span class="eyebrow">STAGE SEQUENCE</span>
+                                <h2>Susun tahapan</h2>
+                                <p>Urutan stage menentukan perjalanan user.</p>
+                            </div>
+
+                            <button
+                                class="btn btn-secondary"
+                                type="button"
+                                id="add-path-stage"
+                            >
+                                + Tambah Tahap
+                            </button>
+                        </div>
+
+                        <div id="path-builder-stages" class="flow"></div>
+                    </section>
+
+                    <section class="form-section">
+                        <div class="notice warning">
+                            Periksa urutan, challenge yang terhubung, prasyarat, dan kriteria penyelesaian sebelum mengaktifkan jalur.
+                        </div>
+
+                        <div class="between" style="margin-top: 16px">
+                            <a href="growth-paths.html" class="btn btn-ghost">
+                                Batal
+                            </a>
+
+                            <div class="heading-actions">
+                                <button
+                                    class="btn btn-secondary"
+                                    type="button"
+                                    id="save-path-draft"
+                                >
+                                    Simpan Draft
+                                </button>
+
+                                <button
+                                    class="btn btn-primary"
+                                    type="submit"
+                                >
+                                    Simpan Growth Path ↗
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div class="toast-root" id="toast-root" aria-live="polite"></div>
+
+    <script defer src="../js/storage.js"></script>
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/auth.js"></script>
+    <script defer src="../js/ui.js"></script>
+    <script defer src="../js/progression.js"></script>
+    <script defer src="../js/admin/growth-path-builder.js"></script>
+</body>
+</html>
+```

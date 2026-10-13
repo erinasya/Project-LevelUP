@@ -1,0 +1,188 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Challenge Session | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/session.css">
+</head>
+
+<body data-page="challenge-session" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">FOCUS ON THE PROCESS</span>
+                        <h1 id="session-title">Challenge Session</h1>
+                        <p id="session-subtitle">
+                            Kerjakan langkah kecil berikutnya dan catat progresmu.
+                        </p>
+                    </div>
+
+                    <a href="progress.html" class="btn btn-ghost">
+                        Simpan & keluar
+                    </a>
+                </div>
+
+                <div class="session-layout">
+                    <section class="flow">
+                        <article class="card card-blue">
+                            <div class="between">
+                                <div>
+                                    <span class="eyebrow">CURRENT SESSION</span>
+                                    <h2 id="session-step-title">Sesi membaca hari ini</h2>
+                                    <p id="session-step-desc">
+                                        Fokus pada satu aktivitas, lalu catat hal yang kamu pelajari.
+                                    </p>
+                                </div>
+
+                                <span id="session-day" class="badge">Sesi 1</span>
+                            </div>
+
+                            <div class="session-timer" id="session-timer">20:00</div>
+
+                            <p class="small muted" id="session-timer-note">
+                                Timer demo untuk membantu mengatur waktu, bukan bukti mutlak aktivitas.
+                            </p>
+
+                            <div class="session-controls">
+                                <button class="btn btn-primary" id="timer-start">
+                                    ▶ Mulai
+                                </button>
+                                <button class="btn btn-secondary" id="timer-pause" disabled>
+                                    Ⅱ Jeda
+                                </button>
+                                <button class="btn btn-ghost" id="timer-reset">
+                                    ↺ Atur ulang
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="section-head">
+                                <div>
+                                    <span class="eyebrow">TODAY'S CHECKLIST</span>
+                                    <h2>Tugas sesi</h2>
+                                    <p>Tandai tugas ketika benar-benar selesai.</p>
+                                </div>
+
+                                <span id="task-count" class="badge">0/0</span>
+                            </div>
+
+                            <div class="task-checklist" id="session-tasks"></div>
+
+                            <div class="divider"></div>
+
+                            <div class="field">
+                                <label for="session-note">Catatan singkat</label>
+                                <textarea
+                                    id="session-note"
+                                    placeholder="Apa yang kamu lakukan atau pelajari hari ini?"
+                                ></textarea>
+                            </div>
+
+                            <button
+                                id="save-session"
+                                class="btn btn-primary"
+                                style="margin-top:14px"
+                            >
+                                Simpan Progress
+                            </button>
+                        </article>
+                    </section>
+
+                    <aside class="flow">
+                        <article class="card">
+                            <span class="eyebrow">OVERALL PROGRESS</span>
+                            <h2 id="session-progress-title">Reading Habit</h2>
+
+                            <div class="progress-meta">
+                                <span>Progress saat ini</span>
+                                <strong id="session-progress-percent">0%</strong>
+                            </div>
+
+                            <div class="progress-track">
+                                <div
+                                    id="session-progress-bar"
+                                    class="progress-fill"
+                                    style="width:0%"
+                                ></div>
+                            </div>
+
+                            <p id="session-progress-copy" class="small">
+                                Selesaikan tugas untuk memperbarui progres.
+                            </p>
+                        </article>
+
+                        <article class="card">
+                            <span class="eyebrow">BEFORE YOU SUBMIT</span>
+                            <h3>Kriteria penyelesaian</h3>
+
+                            <div id="session-criteria" class="criteria-list">
+                                <div class="criteria-row">
+                                    <span class="check">✓</span>
+                                    <span>Pastikan semua tugas wajib diselesaikan.</span>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <a
+                                href="proof-submission.html"
+                                id="go-submit"
+                                class="btn btn-dark btn-block"
+                            >
+                                Lanjut ke Submission ↗
+                            </a>
+                        </article>
+
+                        <article class="card card-yellow">
+                            <h3>Remember</h3>
+                            <p class="small" style="color:var(--night)">
+                                Konsistensi dibangun dari proses yang realistis. Kamu bisa melanjutkan sesi berikutnya tanpa harus menyelesaikan semuanya sekaligus.
+                            </p>
+                        </article>
+                    </aside>
+                </div>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/challenge-session.js"></script>
+</body>
+</html>

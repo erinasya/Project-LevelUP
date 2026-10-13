@@ -1,0 +1,210 @@
+/* ================================================================= */
+/* HERO SECTION ACHIEVEMENT                                          */
+/* ================================================================= */
+.achievement-hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 18px;
+    background: linear-gradient(120deg, #FFF5CE, #F9EAF5);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.achievement-hero .hero-score {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    color: #1e293b;
+}
+
+/* ================================================================= */
+/* FILTER BUTTONS ACHIEVEMENT                                        */
+/* ================================================================= */
+.achievement-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* ================================================================= */
+/* GRID & KARTU ACHIEVEMENT (ESTETIK & SESUAI PALETTE)                */
+/* ================================================================= */
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.achievement-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.achievement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Variasi Kartu: Sudah Diraih (Unlocked) */
+.achievement-card.unlocked {
+    background: linear-gradient(135deg, rgba(240, 253, 244, 0.6) 0%, rgba(255, 255, 255, 1) 100%);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* Variasi Kartu: Terkunci (Locked) */
+.achievement-card.locked {
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(255, 255, 255, 1) 100%);
+    opacity: 0.85;
+}
+
+.achievement-card.locked:hover {
+    opacity: 1;
+}
+
+/* Bagian Ikon Badge */
+.achievement-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 32px;
+    margin: 0 auto 16px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.unlocked .achievement-icon-wrapper {
+    background: #dcfce7;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.locked .achievement-icon-wrapper {
+    background: #f1f5f9;
+    border: 1px solid rgba(203, 213, 225, 0.4);
+    filter: grayscale(80%);
+}
+
+/* ================================================================= */
+/* CUSTOM PAKSA GANTI IKON GAMBAR SESUAI URUTAN KARTU                */
+/* ================================================================= */
+/* 1. First Step: Tanaman yang baru tumbuh */
+.achievement-card:nth-child(1) .achievement-icon-wrapper img {
+    content: url('https://cdn-icons-png.flaticon.com/512/4341/4341139.png') !important;
+}
+
+/* 2. Book Explorer: Tetap */
+.achievement-card:nth-child(2) .achievement-icon-wrapper img {
+    content: url('https://cdn-icons-png.flaticon.com/512/3389/3389081.png') !important;
+}
+
+/* 3. Creative Mind: Palet lukis & satu bidak catur */
+.achievement-card:nth-child(3) .achievement-icon-wrapper img {
+    content: url('https://cdn-icons-png.flaticon.com/512/2952/2952212.png') !important;
+}
+
+/* 4. Steady Steps: Sepatu yang sedang menempuh langkah */
+.achievement-card:nth-child(4) .achievement-icon-wrapper img {
+    content: url('https://cdn-icons-png.flaticon.com/512/3176/3176363.png') !important;
+}
+
+/* 5. Deep Thinker: Gambar otak */
+.achievement-card:nth-child(5) .achievement-icon-wrapper img {
+    content: url('https://cdn-icons-png.flaticon.com/512/4230/4230623.png') !important;
+}
+
+/* Konten Teks */
+.achievement-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.achievement-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.achievement-desc {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Footer Kartu (Status & Aksi) */
+.achievement-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.06);
+}
+
+/* Badge Status Kecil */
+.achievement-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.badge-unlocked {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.badge-locked {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+/* Tombol Tautan Aksi Bawah */
+.achievement-action-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0f172a;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease;
+}
+
+.achievement-action-link:hover {
+    color: #2563eb;
+}
+
+/* ================================================================= */
+/* RESPONSIVE MEDIA QUERIES                                          */
+/* ================================================================= */
+@media (max-width: 600px) {
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .achievement-hero .hero-score {
+        font-size: 30px;
+    }
+}

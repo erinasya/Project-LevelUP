@@ -1,0 +1,154 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Achievements & Unlocks | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/achievements.css">
+</head>
+
+<body data-page="achievements" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">MILESTONES WITH MEANING</span>
+                        <h1>Achievements & Unlocks</h1>
+                        <p>
+                            Setiap pencapaian menandai langkah yang telah kamu lewati dan membuka kemungkinan berikutnya.
+                        </p>
+                    </div>
+
+                    <a href="benefit-hub.html" class="btn btn-primary">
+                        Lihat Benefit Hub ↗
+                    </a>
+                </div>
+
+                <section class="achievement-hero card">
+                    <div>
+                        <span class="eyebrow">YOUR MILESTONES</span>
+                        <h2>Progress yang layak dirayakan.</h2>
+                        <p>
+                            Fokus pada hal yang kamu selesaikan dan apa yang bisa kamu lakukan berikutnya.
+                        </p>
+
+                        <div class="quick-stats">
+                            <span class="badge yellow" id="achievement-count">
+                                0 earned
+                            </span>
+                            <span class="badge lavender" id="achievement-level">
+                                Level 1
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="hero-score">
+                        <div id="achievement-xp">0 XP</div>
+                        <span class="small muted">Total XP demo</span>
+
+                        <div
+                            class="progress-track"
+                            style="margin-top:10px;width:160px"
+                        >
+                            <div
+                                id="achievement-xp-bar"
+                                class="progress-fill"
+                                style="width:0%"
+                            ></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">COLLECTION</span>
+                            <h2>Achievement kamu</h2>
+                        </div>
+
+                        <div class="achievement-filter">
+                            <button
+                                class="chip active"
+                                data-achievement-filter="all"
+                            >
+                                Semua
+                            </button>
+                            <button
+                                class="chip"
+                                data-achievement-filter="earned"
+                            >
+                                Diraih
+                            </button>
+                            <button
+                                class="chip"
+                                data-achievement-filter="locked"
+                            >
+                                Terkunci
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        id="achievement-grid"
+                        class="achievement-grid"
+                    ></div>
+                </section>
+
+                <section class="section">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">WHAT'S NEXT</span>
+                            <h2>Kesempatan yang terbuka</h2>
+                            <p>
+                                Pencapaianmu dapat menjadi langkah menuju challenge berikutnya.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        id="achievement-unlocks"
+                        class="grid grid-3"
+                    ></div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/achievements.js"></script>
+</body>
+</html>

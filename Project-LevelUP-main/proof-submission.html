@@ -1,0 +1,195 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Proof Submission | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/submission.css">
+</head>
+
+<body data-page="proof-submission" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">SHOW YOUR PROCESS</span>
+                        <h1>Submit Your Proof</h1>
+                        <p>
+                            Kirim bukti yang sesuai dengan kriteria challenge, bukan sekadar mengisi semua kolom.
+                        </p>
+                    </div>
+
+                    <a href="progress.html" class="btn btn-ghost">
+                        ← My Progress
+                    </a>
+                </div>
+
+                <div class="submission-layout">
+                    <section class="flow">
+                        <article class="card">
+                            <span class="eyebrow">CHALLENGE SUMMARY</span>
+                            <h2 id="submission-challenge-title">Reading Habit</h2>
+                            <p id="submission-challenge-desc">
+                                Lengkapi kriteria dan siapkan bukti yang relevan.
+                            </p>
+
+                            <div
+                                id="submission-checklist"
+                                class="submission-requirements"
+                            ></div>
+                        </article>
+
+                        <form id="proof-form" class="card flow">
+                            <div>
+                                <span class="eyebrow">YOUR SUBMISSION</span>
+                                <h2>Lengkapi bukti</h2>
+                                <p class="small">
+                                    Kolom dapat berbeda sesuai jenis challenge.
+                                </p>
+                            </div>
+
+                            <div class="field">
+                                <label for="proof-file">
+                                    File bukti (opsional sesuai challenge)
+                                </label>
+
+                                <label for="proof-file" class="dropzone">
+                                    <div class="drop-icon">↥</div>
+                                    <strong>Pilih file atau klik untuk mengunggah</strong>
+                                    <p class="small">
+                                        Prototype menyimpan nama file saja. File tidak diunggah ke server.
+                                    </p>
+                                    <span class="badge">JPG, PNG, PDF, TXT</span>
+                                </label>
+
+                                <input
+                                    id="proof-file"
+                                    type="file"
+                                    accept=".jpg,.jpeg,.png,.pdf,.txt"
+                                    hidden
+                                >
+
+                                <div id="file-preview" class="hidden"></div>
+                            </div>
+
+                            <div class="field">
+                                <label for="proof-reflection">
+                                    Refleksi atau penjelasan
+                                </label>
+                                <textarea
+                                    id="proof-reflection"
+                                    required
+                                    minlength="10"
+                                    placeholder="Jelaskan hasil yang kamu kerjakan dan hal yang kamu pelajari..."
+                                ></textarea>
+                                <span class="hint">
+                                    Tuliskan konteks yang membantu penilai memahami hasilmu.
+                                </span>
+                            </div>
+
+                            <div class="field">
+                                <label for="proof-pages">
+                                    Catatan tambahan / tautan hasil
+                                </label>
+                                <input
+                                    id="proof-pages"
+                                    type="text"
+                                    placeholder="Contoh: halaman 10–18 atau tautan proyek"
+                                >
+                            </div>
+
+                            <label class="checkbox-row">
+                                <input type="checkbox" id="proof-confirm" required>
+                                Saya sudah membaca kriteria dan informasi submission.
+                            </label>
+
+                            <button class="btn btn-primary btn-block" type="submit">
+                                Kirim Submission ↗
+                            </button>
+
+                            <p class="small muted mb-0">
+                                Mengirim bukti tidak otomatis berarti submission disetujui. Status mengikuti kriteria dan alur pemeriksaan demo.
+                            </p>
+                        </form>
+                    </section>
+
+                    <aside class="flow">
+                        <article class="card card-yellow">
+                            <h3>What reviewers check</h3>
+
+                            <div class="criteria-list">
+                                <div class="criteria-row">
+                                    <span class="check">✓</span>
+                                    <span>Kesesuaian dengan kriteria challenge.</span>
+                                </div>
+
+                                <div class="criteria-row">
+                                    <span class="check">✓</span>
+                                    <span>Kelengkapan hasil atau refleksi.</span>
+                                </div>
+
+                                <div class="criteria-row">
+                                    <span class="check">✓</span>
+                                    <span>Konteks yang cukup untuk menilai bukti.</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <span class="eyebrow">AFTER SUBMITTING</span>
+                            <h3>Langkah berikutnya</h3>
+                            <p class="small">
+                                Kamu dapat melihat status pada halaman Submission Status. Jika ditolak, alasan dan opsi perbaikan akan ditampilkan jika challenge mengizinkan pengiriman ulang.
+                            </p>
+
+                            <a
+                                class="btn btn-secondary btn-block"
+                                href="submission-status.html"
+                            >
+                                Lihat Status Submission ↗
+                            </a>
+                        </article>
+                    </aside>
+                </div>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/proof-submission.js"></script>
+</body>
+</html>

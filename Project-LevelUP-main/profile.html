@@ -1,0 +1,173 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Profile & Settings | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body data-page="profile" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">YOUR PERSONAL SPACE</span>
+                        <h1>Profile & Settings</h1>
+                        <p>
+                            Atur preferensi dan informasi yang mendukung perjalananmu.
+                        </p>
+                    </div>
+                </div>
+
+                <section class="profile-hero card">
+                    <div class="profile-avatar" id="profile-avatar">S</div>
+
+                    <div>
+                        <span class="badge teal">LEVELUP MEMBER</span>
+                        <h2 id="profile-heading">Sarah</h2>
+                        <p id="profile-summary">
+                            Anggota LevelUp · Growth at your own pace.
+                        </p>
+                    </div>
+
+                    <div style="margin-left:auto">
+                        <span class="badge lavender" id="profile-level">Level 1</span>
+                    </div>
+                </section>
+
+                <section class="section grid grid-2">
+                    <form id="profile-form" class="card">
+                        <div class="section-head">
+                            <div>
+                                <span class="eyebrow">PERSONAL INFORMATION</span>
+                                <h2>Informasi profil</h2>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="field field-full">
+                                <label for="profile-name">Nama</label>
+                                <input id="profile-name" required>
+                            </div>
+
+                            <div class="field field-full">
+                                <label for="profile-email">Email demo</label>
+                                <input id="profile-email" type="email" readonly>
+                                <span class="hint">
+                                    Email akun demo tidak dapat diganti di prototype.
+                                </span>
+                            </div>
+
+                            <div class="field field-full">
+                                <label for="profile-bio">Bio singkat</label>
+                                <textarea
+                                    id="profile-bio"
+                                    placeholder="Ceritakan tujuan atau minatmu"
+                                ></textarea>
+                            </div>
+
+                            <div class="field field-full">
+                                <label for="profile-goal">Tujuan utama</label>
+                                <input
+                                    id="profile-goal"
+                                    placeholder="Tujuan pengembangan diri"
+                                >
+                            </div>
+
+                            <div class="field field-full">
+                                <label for="profile-time">Waktu yang tersedia</label>
+                                <select id="profile-time">
+                                    <option>10–15 menit per hari</option>
+                                    <option>20–30 menit per hari</option>
+                                    <option>Beberapa sesi per minggu</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                            style="margin-top:17px"
+                        >
+                            Simpan Perubahan
+                        </button>
+                    </form>
+
+                    <aside class="flow">
+                        <article class="card">
+                            <span class="eyebrow">PREFERENCES</span>
+                            <h2>Privasi dan preferensi</h2>
+
+                            <label class="checkbox-row" style="margin:15px 0">
+                                <input type="checkbox" id="profile-public">
+                                Tampilkan achievement di profil publik (demo)
+                            </label>
+
+                            <label class="checkbox-row" style="margin:15px 0">
+                                <input type="checkbox" id="profile-reminders" checked>
+                                Aktifkan pengingat demo
+                            </label>
+
+                            <p class="small">
+                                Data submission dan refleksi tetap privat secara default.
+                            </p>
+
+                            <button class="btn btn-secondary" id="save-preferences">
+                                Simpan Preferensi
+                            </button>
+                        </article>
+
+                        <article class="card card-yellow">
+                            <h3>Account</h3>
+                            <p class="small">
+                                Kamu sedang menggunakan akun demo lokal di browser ini.
+                            </p>
+                            <button class="btn btn-dark" data-logout>
+                                Keluar dari LevelUp ↗
+                            </button>
+                        </article>
+                    </aside>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/profile.js"></script>
+</body>
+</html>

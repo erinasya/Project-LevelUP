@@ -1,0 +1,172 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Growth Insights | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/insights.css">
+</head>
+
+<body data-page="growth-insights" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">LOOK BACK, MOVE FORWARD</span>
+                        <h1>Growth Insights</h1>
+                        <p>
+                            Lihat pola aktivitasmu dan gunakan sebagai petunjuk untuk menentukan langkah berikutnya.
+                        </p>
+                    </div>
+
+                    <select
+                        id="insights-period"
+                        class="search-input"
+                        style="max-width:170px"
+                    >
+                        <option value="7">7 hari terakhir</option>
+                        <option value="30" selected>30 hari terakhir</option>
+                        <option value="all">Seluruh waktu</option>
+                    </select>
+                </div>
+
+                <section class="insights-top">
+                    <article class="card insight-callout">
+                        <span class="eyebrow">YOUR MOMENTUM</span>
+                        <div class="insight-big" id="insights-completed">0 challenge</div>
+                        <p id="insights-summary">
+                            Ringkasan aktivitasmu akan muncul di sini.
+                        </p>
+
+                        <div class="progress-meta">
+                            <span>Growth Path progress</span>
+                            <strong id="insights-path-progress">0%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div
+                                id="insights-path-bar"
+                                class="progress-fill"
+                                style="width:0%"
+                            ></div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <span class="eyebrow">PERSONAL BEST</span>
+                        <h2 id="personal-best-number">0</h2>
+                        <p id="personal-best-copy">
+                            Challenge selesai dalam data demo.
+                        </p>
+
+                        <div class="notice">
+                            Statistik menunjukkan aktivitas yang tercatat, bukan bukti mutlak peningkatan skill.
+                        </div>
+                    </article>
+                </section>
+
+                <section class="section grid grid-2">
+                    <article class="card">
+                        <div class="section-head">
+                            <div>
+                                <span class="eyebrow">ACTIVITY TREND</span>
+                                <h2>Aktivitas dari waktu ke waktu</h2>
+                            </div>
+                        </div>
+
+                        <div class="chart-bars" id="insights-chart"></div>
+
+                        <div class="chart-legend">
+                            <span>
+                                <i></i> Aktivitas tercatat
+                            </span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="section-head">
+                            <div>
+                                <span class="eyebrow">BY CATEGORY</span>
+                                <h2>Bidang yang kamu jelajahi</h2>
+                            </div>
+                        </div>
+
+                        <div class="between">
+                            <div class="donut">
+                                <div class="donut-center" id="insights-category-total">
+                                    0
+                                </div>
+                            </div>
+
+                            <div id="insights-category-legend" class="flow"></div>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="section">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">RECOMMENDED NEXT STEP</span>
+                            <h2>Langkah berikutnya</h2>
+                        </div>
+                    </div>
+
+                    <div id="insights-next-step" class="grid grid-2"></div>
+                </section>
+
+                <section class="section card">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">ACTIVITY HISTORY</span>
+                            <h2>Riwayat aktivitas</h2>
+                        </div>
+
+                        <a class="link" href="progress.html">
+                            Lihat semua progress ↗
+                        </a>
+                    </div>
+
+                    <div id="insights-history"></div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/growth-insights.js"></script>
+</body>
+</html>

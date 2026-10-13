@@ -1,0 +1,108 @@
+```html
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+
+    <title>Growth Path Management | LevelUp</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body data-page="admin-growth-paths" data-require-role="admin">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div class="admin-heading">
+                        <div>
+                            <span class="eyebrow">PROGRESSION DESIGN</span>
+                            <h1>Growth Path Management</h1>
+                            <p>
+                                Hubungkan challenge menjadi jalur perkembangan yang memiliki tujuan jelas.
+                            </p>
+                        </div>
+
+                        <span class="admin-marker">ADMIN</span>
+                    </div>
+
+                    <a href="growth-path-builder.html" class="btn btn-primary">
+                        + Buat Growth Path
+                    </a>
+                </div>
+
+                <section class="grid grid-3">
+                    <article class="card stat-card card-blue">
+                        <div class="stat-label">ACTIVE PATHS</div>
+                        <div class="stat-value" id="admin-path-active">0</div>
+                    </article>
+
+                    <article class="card stat-card card-yellow">
+                        <div class="stat-label">TOTAL STAGES</div>
+                        <div class="stat-value" id="admin-path-stages">0</div>
+                    </article>
+
+                    <article class="card stat-card card-lavender">
+                        <div class="stat-label">LINKED CHALLENGES</div>
+                        <div class="stat-value" id="admin-path-challenges">0</div>
+                    </article>
+                </section>
+
+                <section class="section">
+                    <div class="toolbar">
+                        <input
+                            id="admin-path-search"
+                            class="search-input"
+                            type="search"
+                            placeholder="Cari Growth Path..."
+                        >
+
+                        <select
+                            id="admin-path-status"
+                            class="search-input"
+                            style="max-width: 170px"
+                        >
+                            <option value="all">Semua status</option>
+                            <option value="active">Aktif</option>
+                            <option value="draft">Draft</option>
+                        </select>
+                    </div>
+
+                    <div id="admin-path-list" class="grid grid-2"></div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div class="toast-root" id="toast-root" aria-live="polite"></div>
+
+    <script defer src="../js/storage.js"></script>
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/auth.js"></script>
+    <script defer src="../js/ui.js"></script>
+    <script defer src="../js/progression.js"></script>
+    <script defer src="../js/admin/growth-paths.js"></script>
+</body>
+</html>
+```

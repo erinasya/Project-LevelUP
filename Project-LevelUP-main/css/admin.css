@@ -1,0 +1,68 @@
+.admin-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-marker {
+    padding: 5px 9px;
+    background: var(--night);
+    color: white;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+.admin-kpis .stat-card {
+    min-height: 120px;
+}
+
+.admin-table-actions {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(250px, .55fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.admin-form-aside {
+    position: sticky;
+    top: 105px;
+}
+
+.review-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+    gap: 18px;
+    align-items: start;
+}
+
+.risk-note {
+    border-left: 3px solid var(--yellow);
+    padding: 12px 14px;
+    background: #FFF9DE;
+    border-radius: 0 12px 12px 0;
+    font-size: 11px;
+    color: #725B1A;
+}
+
+.admin-table-wrap {
+    overflow-x: auto;
+}
+
+@media (max-width: 850px) {
+    .admin-form-grid,
+    .review-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form-aside {
+        position: static;
+    }
+}

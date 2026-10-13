@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+
+    <title>Submission Review Queue | LevelUp</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body data-page="admin-submissions" data-require-role="admin">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div class="admin-heading">
+                        <div>
+                            <span class="eyebrow">REVIEW OPERATIONS</span>
+                            <h1>Submission Review</h1>
+                            <p>
+                                Prioritaskan submission yang memerlukan penilaian, bukan memeriksa semua aktivitas secara manual.
+                            </p>
+                        </div>
+
+                        <span class="admin-marker">ADMIN</span>
+                    </div>
+
+                    <a href="review-history.html" class="btn btn-secondary">
+                        Review History ↗
+                    </a>
+                </div>
+
+                <section class="grid grid-4 admin-kpis">
+                    <article class="card stat-card card-yellow">
+                        <div class="stat-label">PENDING</div>
+                        <div class="stat-value" id="queue-pending">0</div>
+                    </article>
+
+                    <article class="card stat-card card-peach">
+                        <div class="stat-label">NEEDS REVIEW</div>
+                        <div class="stat-value" id="queue-needs-review">0</div>
+                    </article>
+
+                    <article class="card stat-card card-green">
+                        <div class="stat-label">APPROVED</div>
+                        <div class="stat-value" id="queue-approved">0</div>
+                    </article>
+
+                    <article class="card stat-card card-lavender">
+                        <div class="stat-label">REJECTED</div>
+                        <div class="stat-value" id="queue-rejected">0</div>
+                    </article>
+                </section>
+
+                <section class="section">
+                    <div class="toolbar">
+                        <input
+                            id="submission-search"
+                            class="search-input"
+                            type="search"
+                            placeholder="Cari user, challenge, atau ID..."
+                        >
+
+                        <select
+                            id="submission-filter"
+                            class="search-input"
+                            style="max-width: 190px"
+                        >
+                            <option value="all">Semua status</option>
+                            <option value="pending">Pending</option>
+                            <option value="needs-review">Needs Review</option>
+                            <option value="approved">Approved</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+
+                        <select
+                            id="submission-priority"
+                            class="search-input"
+                            style="max-width: 190px"
+                        >
+                            <option value="all">Semua prioritas</option>
+                            <option value="attention">Needs Attention</option>
+                            <option value="normal">Normal</option>
+                        </select>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID / User</th>
+                                    <th>Challenge</th>
+                                    <th>Proof Type</th>
+                                    <th>Submitted</th>
+                                    <th>Status</th>
+                                    <th>Priority</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="submission-queue-table"></tbody>
+                        </table>
+                    </div>
+
+                    <div id="submission-queue-empty" class="section hidden"></div>
+                </section>
+
+                <section class="section risk-note">
+                    Indikator risiko hanya membantu menentukan prioritas pemeriksaan. Indikator tersebut bukan keputusan bahwa pengguna melakukan kecurangan.
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div class="toast-root" id="toast-root" aria-live="polite"></div>
+
+    <script defer src="../js/storage.js"></script>
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/auth.js"></script>
+    <script defer src="../js/ui.js"></script>
+    <script defer src="../js/progression.js"></script>
+    <script defer src="../js/admin/submissions.js"></script>
+</body>
+</html>

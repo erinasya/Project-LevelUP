@@ -1,0 +1,135 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>My Progress | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/progress.css">
+</head>
+
+<body data-page="progress" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">YOUR ACTIVITY</span>
+                        <h1>My Progress</h1>
+                        <p>
+                            Lihat aktivitas yang berjalan, status bukti, dan hal yang bisa kamu lanjutkan.
+                        </p>
+                    </div>
+
+                    <a href="challenges.html" class="btn btn-primary">
+                        Cari Challenge ↗
+                    </a>
+                </div>
+
+                <section class="grid grid-4">
+                    <article class="card stat-card card-blue">
+                        <div class="stat-label">SEDANG BERJALAN</div>
+                        <div class="stat-value" id="progress-active-count">0</div>
+                        <span class="small muted">Challenge aktif</span>
+                    </article>
+
+                    <article class="card stat-card card-green">
+                        <div class="stat-label">SELESAI</div>
+                        <div class="stat-value" id="progress-completed-count">0</div>
+                        <span class="small muted">Challenge tuntas</span>
+                    </article>
+
+                    <article class="card stat-card card-yellow">
+                        <div class="stat-label">PENDING REVIEW</div>
+                        <div class="stat-value" id="progress-pending-count">0</div>
+                        <span class="small muted">Menunggu keputusan</span>
+                    </article>
+
+                    <article class="card stat-card card-lavender">
+                        <div class="stat-label">PERLU PERBAIKAN</div>
+                        <div class="stat-value" id="progress-rejected-count">0</div>
+                        <span class="small muted">Submission ditolak</span>
+                    </article>
+                </section>
+
+                <section class="section">
+                    <div class="toolbar">
+                        <input
+                            id="progress-search"
+                            class="search-input"
+                            type="search"
+                            placeholder="Cari challenge..."
+                        >
+
+                        <select
+                            id="progress-filter"
+                            class="search-input"
+                            style="max-width:210px"
+                        >
+                            <option value="all">Semua status</option>
+                            <option value="in-progress">Sedang berjalan</option>
+                            <option value="pending">Pending review</option>
+                            <option value="approved">Selesai</option>
+                            <option value="rejected">Perlu perbaikan</option>
+                        </select>
+                    </div>
+
+                    <div class="progress-page-list" id="progress-list"></div>
+                    <div id="progress-empty" class="section hidden"></div>
+                </section>
+
+                <section class="section card card-lavender">
+                    <div class="between">
+                        <div>
+                            <span class="eyebrow">KEEP YOUR RHYTHM</span>
+                            <h2>Progress tidak harus sempurna.</h2>
+                            <p>
+                                Lanjutkan dari langkah terakhir yang kamu kerjakan.
+                            </p>
+                        </div>
+
+                        <a href="growth-plan.html" class="btn btn-dark">
+                            Lihat Growth Plan ↗
+                        </a>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/progress.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Dashboard | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body data-page="dashboard" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <section class="welcome-banner card">
+                    <div>
+                        <span class="eyebrow">YOUR GROWTH SPACE</span>
+                        <h1>Halo, <span data-user-name>Sarah</span>! <span>✦</span></h1>
+                        <p>
+                            Setiap langkah kecil adalah progres. Yuk, lanjutkan hal baik yang sudah kamu mulai.
+                        </p>
+                        <a class="btn btn-dark" href="progress.html">
+                            Lanjutkan progres ↗
+                        </a>
+                    </div>
+
+                </section>
+
+                <section class="section grid grid-4" id="dashboard-stats">
+                    <article class="card stat-card card-yellow">
+                        <div class="stat-top">
+                            <span class="stat-label">CHALLENGE SELESAI</span>
+                            <span class="stat-icon">✦</span>
+                        </div>
+                        <div class="stat-value" data-stat="completed">0</div>
+                        <span class="small muted">Pencapaian yang dituntaskan</span>
+                    </article>
+
+                    <article class="card stat-card card-blue">
+                        <div class="stat-top">
+                            <span class="stat-label">AKTIF SEKARANG</span>
+                            <span class="stat-icon">◷</span>
+                        </div>
+                        <div class="stat-value" data-stat="active">0</div>
+                        <span class="small muted">Challenge berjalan</span>
+                    </article>
+
+                    <article class="card stat-card card-lavender">
+                        <div class="stat-top">
+                            <span class="stat-label">ACHIEVEMENT</span>
+                            <span class="stat-icon">🏅</span>
+                        </div>
+                        <div class="stat-value" data-stat="achievements">0</div>
+                        <span class="small muted">Milestone yang diraih</span>
+                    </article>
+
+                    <article class="card stat-card card-green">
+                        <div class="stat-top">
+                            <span class="stat-label">TOTAL XP</span>
+                            <span class="stat-icon">↗</span>
+                        </div>
+                        <div class="stat-value" data-stat="xp">0</div>
+                        <span class="small muted">Poin perkembangan demo</span>
+                    </article>
+                </section>
+
+                <section class="section hero-row">
+                    <article class="card">
+                        <div class="section-head">
+                            <div>
+                                <span class="eyebrow">YOUR CURRENT PATH</span>
+                                <h2>Perjalanan yang sedang kamu bangun</h2>
+                                <p>Fokus pada satu langkah berikutnya.</p>
+                            </div>
+                            <a class="link" href="growth-plan.html">Lihat semua ↗</a>
+                        </div>
+
+                        <div id="dashboard-path"></div>
+                    </article>
+
+                    <article class="card card-dark">
+                        <span class="eyebrow">NEXT SMALL STEP</span>
+                        <h2 style="margin-top:10px">
+                            Progress lebih penting daripada sempurna.
+                        </h2>
+                        <p>
+                            Sesi kecil yang konsisten lebih mudah dipertahankan daripada perubahan besar yang tidak realistis.
+                        </p>
+                        <div style="margin-top:22px">
+                            <a class="btn btn-yellow" href="challenges.html">
+                                Cari challenge ↗
+                            </a>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="section">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">PICK UP WHERE YOU LEFT OFF</span>
+                            <h2>Lanjutkan challenge</h2>
+                            <p>Challenge yang sudah kamu mulai.</p>
+                        </div>
+                        <a class="link" href="progress.html">Semua progres ↗</a>
+                    </div>
+
+                    <div class="challenge-grid" id="dashboard-active"></div>
+                </section>
+
+                <section class="section">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">A GOOD NEXT STEP</span>
+                            <h2>Rekomendasi untukmu</h2>
+                            <p>Dipilih berdasarkan tujuan dan Growth Path demo.</p>
+                        </div>
+                        <a class="link" href="challenges.html">Jelajahi semua ↗</a>
+                    </div>
+
+                    <div class="challenge-grid" id="dashboard-recommended"></div>
+                </section>
+
+                <section class="section dashboard-lower">
+                    <article class="card">
+                        <div class="section-head">
+                            <div>
+                                <span class="eyebrow">RECENT MILESTONES</span>
+                                <h2>Achievement terbaru</h2>
+                            </div>
+                            <a class="link" href="achievements.html">Lihat semua</a>
+                        </div>
+
+                        <div id="dashboard-achievements"></div>
+                    </article>
+
+                    <article class="card card-lavender">
+                        <span class="eyebrow">A NOTE FOR YOU</span>
+                        <p class="dashboard-quote">
+                            “Kamu tidak harus berlari setiap hari. Yang penting, tahu ke mana kamu sedang melangkah.”
+                        </p>
+                        <a href="growth-insights.html" class="btn btn-dark">
+                            Lihat Growth Insights ↗
+                        </a>
+                    </article>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/dashboard.js"></script>
+</body>
+</html>

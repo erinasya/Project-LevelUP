@@ -1,0 +1,76 @@
+.onboarding-wrap {
+    max-width: 900px;
+    margin: auto;
+}
+
+.onboarding-progress {
+    display: flex;
+    gap: 7px;
+    margin: 22px 0;
+}
+
+.onboarding-progress span {
+    height: 5px;
+    border-radius: 99px;
+    background: #E2E8EA;
+    flex: 1;
+}
+
+.onboarding-progress span.active {
+    background: var(--pool);
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.choice-card {
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 155px;
+}
+
+.choice-card:hover,
+.choice-card.selected {
+    border-color: var(--pool);
+    box-shadow: 0 0 0 3px rgba(71, 181, 168, .12);
+}
+
+.choice-card.selected {
+    background: #F0FBF9;
+}
+
+.choice-symbol {
+    font-size: 26px;
+}
+
+.choice-card p {
+    font-size: 11px;
+    margin: 0;
+}
+
+.onboarding-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+@media (max-width: 650px) {
+    .choice-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .choice-card {
+        min-height: 135px;
+        padding: 14px;
+    }
+}

@@ -1,0 +1,187 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Onboarding | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/onboarding.css">
+</head>
+
+<body data-page="onboarding" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="onboarding-wrap">
+                    <div class="page-heading">
+                        <div>
+                            <span class="eyebrow">LET'S SET YOUR DIRECTION</span>
+                            <h1>Mulai dari tujuanmu.</h1>
+                            <p>
+                                Pilih fokus yang paling berarti buatmu saat ini. Kamu bisa mengubahnya nanti.
+                            </p>
+                        </div>
+
+                        <a class="btn btn-ghost" href="dashboard.html">
+                            Lewati dulu
+                        </a>
+                    </div>
+
+                    <div class="onboarding-progress" aria-label="Langkah onboarding">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <form id="onboarding-form">
+                        <section class="card">
+                            <div class="section-head">
+                                <div>
+                                    <span class="eyebrow">STEP 01</span>
+                                    <h2>Apa yang ingin kamu kembangkan?</h2>
+                                    <p>Pilih satu atau lebih area yang menarik buatmu.</p>
+                                </div>
+                            </div>
+
+                            <div class="choice-grid" id="interest-choices">
+                                <button
+                                    type="button"
+                                    class="choice-card selected"
+                                    data-interest="learning"
+                                >
+                                    <span class="choice-symbol">📚</span>
+                                    <strong>Learning & Focus</strong>
+                                    <p>Membaca, belajar, dan berpikir lebih terarah.</p>
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="choice-card"
+                                    data-interest="creative"
+                                >
+                                    <span class="choice-symbol">🎨</span>
+                                    <strong>Creative & Digital Skills</strong>
+                                    <p>Menulis, desain, fotografi, dan coding.</p>
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="choice-card"
+                                    data-interest="healthy"
+                                >
+                                    <span class="choice-symbol">🌱</span>
+                                    <strong>Healthy Habits</strong>
+                                    <p>Membangun rutinitas yang realistis.</p>
+                                </button>
+                            </div>
+                        </section>
+
+                        <section class="card section">
+                            <span class="eyebrow">STEP 02</span>
+                            <h2>Sesuaikan dengan ritmemu.</h2>
+
+                            <div class="form-grid" style="margin-top:18px">
+                                <div class="field">
+                                    <label for="goal">Tujuan utama</label>
+                                    <select id="goal" name="goal">
+                                        <option value="Membangun kebiasaan membaca">
+                                            Membangun kebiasaan membaca
+                                        </option>
+                                        <option value="Meningkatkan kemampuan kreatif">
+                                            Meningkatkan kemampuan kreatif
+                                        </option>
+                                        <option value="Belajar skill digital">
+                                            Belajar skill digital
+                                        </option>
+                                        <option value="Membangun rutinitas sehat">
+                                            Membangun rutinitas sehat
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label for="skill-level">Tingkat kemampuan saat ini</label>
+                                    <select id="skill-level">
+                                        <option>Beginner</option>
+                                        <option>Intermediate</option>
+                                        <option>Advanced</option>
+                                    </select>
+                                </div>
+
+                                <div class="field field-full">
+                                    <label for="available-time">Waktu yang tersedia</label>
+                                    <select id="available-time">
+                                        <option>10–15 menit per hari</option>
+                                        <option selected>20–30 menit per hari</option>
+                                        <option>Beberapa sesi per minggu</option>
+                                    </select>
+                                    <span class="hint">
+                                        Pilih jadwal yang bisa kamu pertahankan, bukan jadwal yang paling ambisius.
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="card card-blue section">
+                            <div class="between">
+                                <div>
+                                    <span class="eyebrow">YOUR FIRST STEP</span>
+                                    <h2>Rekomendasi awal untukmu</h2>
+                                    <p id="onboarding-recommendation">
+                                        Reading & Critical Thinking · 3 tahap perkembangan
+                                    </p>
+                                </div>
+
+                                <img
+                                    src="assets/images/illustrations/reading.svg"
+                                    alt=""
+                                    style="width:145px"
+                                >
+                            </div>
+
+                            <button class="btn btn-primary" type="submit">
+                                Simpan Tujuan & Lanjutkan ↗
+                            </button>
+                        </section>
+                    </form>
+                </div>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/onboarding.js"></script>
+</body>
+</html>

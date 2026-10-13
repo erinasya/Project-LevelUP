@@ -1,0 +1,3 @@
+AKUN DEMO
+User:  user@levelup.id / user123
+Admin: admin@levelup.id / admin123

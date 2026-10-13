@@ -1,0 +1,138 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>My Growth Plan | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/growth-plan.css">
+</head>
+
+<body data-page="growth-plan" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">YOUR DIRECTION</span>
+                        <h1>My Growth Plan</h1>
+                        <p>
+                            Tujuan yang jelas membuat langkah berikutnya terasa lebih ringan.
+                        </p>
+                    </div>
+
+                    <div class="heading-actions">
+                        <a href="onboarding.html" class="btn btn-secondary">
+                            Edit Tujuan
+                        </a>
+                        <a href="challenges.html" class="btn btn-primary">
+                            Temukan Challenge ↗
+                        </a>
+                    </div>
+                </div>
+
+                <section class="goal-summary">
+                    <article class="card card-blue">
+                        <span class="eyebrow">MAIN GOAL</span>
+                        <h2 id="main-goal-title">
+                            Membangun kebiasaan belajar dan berpikir kritis
+                        </h2>
+                        <p id="main-goal-desc">
+                            Buat ruang untuk belajar sedikit demi sedikit dengan cara yang cocok untukmu.
+                        </p>
+
+                        <div class="quick-stats">
+                            <span class="badge">Learning & Focus</span>
+                            <span class="badge yellow">20–30 menit per hari</span>
+                            <span class="badge lavender">Beginner</span>
+                        </div>
+                    </article>
+
+                    <article class="card goal-metric">
+                        <div class="progress-circle" style="--p:38%">
+                            <span id="plan-progress-number">38%</span>
+                        </div>
+
+                        <div>
+                            <h3>Perjalananmu</h3>
+                            <p class="small">
+                                Progress keseluruhan dari Growth Path aktif.
+                            </p>
+                            <strong id="plan-path-count">1 jalur aktif</strong>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="section">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">YOUR PATHS</span>
+                            <h2>Growth Path aktif</h2>
+                            <p>Jalur yang mengarahkanmu ke hasil berikutnya.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-2" id="growth-plan-paths"></div>
+                </section>
+
+                <section class="section card">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">NEXT MILESTONES</span>
+                            <h2>Milestone berikutnya</h2>
+                        </div>
+                    </div>
+
+                    <div class="timeline" id="growth-plan-timeline"></div>
+                </section>
+
+                <section class="section">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">DONE AT YOUR PACE</span>
+                            <h2>Tujuan yang selesai</h2>
+                        </div>
+                    </div>
+
+                    <div id="growth-plan-completed"></div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/growth-plan.js"></script>
+</body>
+</html>

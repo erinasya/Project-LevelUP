@@ -1,0 +1,174 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Growth Path Detail | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/growth-path.css">
+</head>
+
+<body data-page="growth-path" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">YOUR PROGRESSION JOURNEY</span>
+                        <h1 id="path-title">Reading & Critical Thinking</h1>
+                        <p id="path-description">
+                            Bangun kebiasaan membaca, pahami gagasan, lalu latih cara berpikir kritis.
+                        </p>
+                    </div>
+
+                    <a href="growth-plan.html" class="btn btn-ghost">
+                        ← My Growth Plan
+                    </a>
+                </div>
+
+                <section class="path-hero card">
+                    <div>
+                        <div class="quick-stats">
+                            <span class="badge lavender" id="path-category">
+                                Learning & Focus
+                            </span>
+                            <span class="badge">Beginner → Intermediate</span>
+                        </div>
+
+                        <h2 style="margin-top:14px">
+                            Perjalanan dibangun dari langkah kecil.
+                        </h2>
+
+                        <p id="path-goal">
+                            Ubah rutinitas menjadi pemahaman dan hasil yang bisa kamu tunjukkan.
+                        </p>
+
+                        <div class="progress-meta">
+                            <span id="path-progress-label">0 dari 3 tahap selesai</span>
+                            <strong id="path-progress-percent">0%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div
+                                class="progress-fill"
+                                id="path-progress-bar"
+                                style="width:0%"
+                            ></div>
+                        </div>
+                    </div>
+
+                    <img
+                        id="path-art"
+                        src="assets/images/illustrations/reading.svg"
+                        alt=""
+                    >
+                </section>
+
+                <section class="section path-overview">
+                    <div class="mini-metric">
+                        <strong id="path-stage-count">3</strong>
+                        <span>Total tahap</span>
+                    </div>
+
+                    <div class="mini-metric">
+                        <strong id="path-duration">15 hari</strong>
+                        <span>Estimasi perjalanan</span>
+                    </div>
+
+                    <div class="mini-metric">
+                        <strong id="path-current">Tahap 1</strong>
+                        <span>Fokus saat ini</span>
+                    </div>
+                </section>
+
+                <section class="section grid grid-2">
+                    <div class="card">
+                        <div class="section-head">
+                            <div>
+                                <span class="eyebrow">THE JOURNEY</span>
+                                <h2>Tahapan perkembangan</h2>
+                            </div>
+                        </div>
+
+                        <div class="timeline" id="path-stages"></div>
+                    </div>
+
+                    <aside class="card">
+                        <span class="eyebrow">WHAT YOU'LL DEVELOP</span>
+                        <h2 style="margin-top:9px">Kemampuan yang dilatih</h2>
+
+                        <div class="criteria-list" id="path-skills">
+                            <div class="criteria-row">
+                                <span class="check">✓</span>
+                                <span>Konsistensi dan pengelolaan waktu</span>
+                            </div>
+
+                            <div class="criteria-row">
+                                <span class="check">✓</span>
+                                <span>Pemahaman dan refleksi</span>
+                            </div>
+
+                            <div class="criteria-row">
+                                <span class="check">✓</span>
+                                <span>Berpikir kritis</span>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="notice">
+                            Tahap berikutnya terbuka setelah prasyarat challenge terpenuhi. XP saja tidak otomatis membuktikan kemampuan.
+                        </div>
+                    </aside>
+                </section>
+
+                <section class="section">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">OTHER DIRECTIONS</span>
+                            <h2>Growth Path lainnya</h2>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-3" id="other-paths"></div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/growth-path.js"></script>
+</body>
+</html>

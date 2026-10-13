@@ -1,0 +1,160 @@
+```html
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+
+    <title>Admin Dashboard | LevelUp</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body data-page="admin-dashboard" data-require-role="admin">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div class="admin-heading">
+                        <div>
+                            <span class="eyebrow">OPERATIONS OVERVIEW</span>
+                            <h1>Admin Dashboard</h1>
+                            <p>
+                                Kelola kualitas challenge dan prioritaskan pemeriksaan yang membutuhkan perhatian.
+                            </p>
+                        </div>
+
+                        <span class="admin-marker">ADMIN</span>
+                    </div>
+
+                    <a href="submissions.html" class="btn btn-dark">
+                        Buka Review Queue ↗
+                    </a>
+                </div>
+
+                <section class="grid grid-4 admin-kpis">
+                    <article class="card stat-card card-blue">
+                        <div class="stat-label">CHALLENGE AKTIF</div>
+                        <div class="stat-value" id="admin-active-challenges">0</div>
+                        <span class="small muted">Tersedia untuk user</span>
+                    </article>
+
+                    <article class="card stat-card card-lavender">
+                        <div class="stat-label">GROWTH PATH</div>
+                        <div class="stat-value" id="admin-path-count">0</div>
+                        <span class="small muted">Jalur terdaftar</span>
+                    </article>
+
+                    <article class="card stat-card card-yellow">
+                        <div class="stat-label">PENDING SUBMISSION</div>
+                        <div class="stat-value" id="admin-pending-count">0</div>
+                        <span class="small muted">Menunggu proses</span>
+                    </article>
+
+                    <article class="card stat-card card-peach">
+                        <div class="stat-label">NEEDS REVIEW</div>
+                        <div class="stat-value" id="admin-review-count">0</div>
+                        <span class="small muted">Perlu pemeriksaan lanjut</span>
+                    </article>
+                </section>
+
+                <section class="section grid grid-2">
+                    <article class="card">
+                        <div class="section-head">
+                            <div>
+                                <span class="eyebrow">PRIORITY QUEUE</span>
+                                <h2>Submission terbaru</h2>
+                            </div>
+
+                            <a class="link" href="submissions.html">
+                                Lihat queue ↗
+                            </a>
+                        </div>
+
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Challenge</th>
+                                        <th>Status</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="admin-dashboard-queue"></tbody>
+                            </table>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="section-head">
+                            <div>
+                                <span class="eyebrow">CONTENT HEALTH</span>
+                                <h2>Challenge status</h2>
+                            </div>
+
+                            <a class="link" href="challenges.html">
+                                Kelola ↗
+                            </a>
+                        </div>
+
+                        <div class="progress-list" id="admin-content-stats"></div>
+
+                        <div class="divider"></div>
+
+                        <a class="btn btn-primary" href="challenge-form.html">
+                            + Buat Challenge Baru
+                        </a>
+                    </article>
+                </section>
+
+                <section class="section card">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">RECENT DECISIONS</span>
+                            <h2>Aktivitas review terbaru</h2>
+                        </div>
+
+                        <a class="link" href="review-history.html">
+                            Lihat riwayat ↗
+                        </a>
+                    </div>
+
+                    <div id="admin-recent-history"></div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div class="toast-root" id="toast-root" aria-live="polite"></div>
+
+    <script defer src="../js/storage.js"></script>
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/auth.js"></script>
+    <script defer src="../js/ui.js"></script>
+    <script defer src="../js/progression.js"></script>
+    <script defer src="../js/admin/dashboard.js"></script>
+</body>
+</html>
+```

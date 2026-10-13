@@ -1,0 +1,107 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Benefit Hub | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/benefits.css">
+</head>
+
+<body data-page="benefit-hub" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">BENEFITS THAT MOVE YOU FORWARD</span>
+                        <h1>Benefit Hub</h1>
+                        <p>
+                            Temukan materi dan kesempatan pengembangan yang tersedia dari perjalananmu.
+                        </p>
+                    </div>
+                </div>
+
+                <section class="benefit-hero card">
+                    <div>
+                        <span class="eyebrow">UNLOCK YOUR NEXT STEP</span>
+                        <h2>Reward terbaik adalah kesempatan untuk berkembang.</h2>
+                        <p>
+                            Benefit di sini berfokus pada materi demo dan challenge lanjutan. Manfaat pihak ketiga hanya akan ditampilkan jika tersedia.
+                        </p>
+                        <a href="achievements.html" class="btn btn-dark">
+                            Lihat pencapaian ↗
+                        </a>
+                    </div>
+
+                    <div class="benefit-illustration">🎁</div>
+                </section>
+
+                <section class="section">
+                    <div class="chips" id="benefit-filters">
+                        <button class="chip active" data-benefit-filter="all">
+                            Semua
+                        </button>
+                        <button class="chip" data-benefit-filter="available">
+                            Tersedia
+                        </button>
+                        <button class="chip" data-benefit-filter="locked">
+                            Terkunci
+                        </button>
+                    </div>
+
+                    <div class="section-head" style="margin-top:18px">
+                        <div>
+                            <h2>Manfaat untukmu</h2>
+                            <p>
+                                Akses mengikuti prasyarat dan ketersediaan yang ditampilkan.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-3" id="benefit-grid"></div>
+                </section>
+
+                <section class="section notice">
+                    Benefit Hub prototype: reward eksternal, voucher, pembayaran, dan mitra nyata belum terhubung.
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/benefit-hub.js"></script>
+</body>
+</html>

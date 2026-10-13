@@ -1,0 +1,137 @@
+```html
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+
+    <title>Challenge Management | LevelUp</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body data-page="admin-challenges" data-require-role="admin">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div class="admin-heading">
+                        <div>
+                            <span class="eyebrow">CONTENT MANAGEMENT</span>
+                            <h1>Challenge Management</h1>
+                            <p>
+                                Buat challenge dengan tujuan, kriteria, dan metode bukti yang jelas.
+                            </p>
+                        </div>
+
+                        <span class="admin-marker">ADMIN</span>
+                    </div>
+
+                    <a href="challenge-form.html" class="btn btn-primary">
+                        + Buat Challenge
+                    </a>
+                </div>
+
+                <section class="grid grid-3">
+                    <article class="card stat-card card-blue">
+                        <div class="stat-label">ACTIVE</div>
+                        <div class="stat-value" id="challenge-active-count">0</div>
+                    </article>
+
+                    <article class="card stat-card card-yellow">
+                        <div class="stat-label">DRAFT</div>
+                        <div class="stat-value" id="challenge-draft-count">0</div>
+                    </article>
+
+                    <article class="card stat-card card-lavender">
+                        <div class="stat-label">ARCHIVED</div>
+                        <div class="stat-value" id="challenge-archived-count">0</div>
+                    </article>
+                </section>
+
+                <section class="section">
+                    <div class="toolbar">
+                        <input
+                            id="admin-challenge-search"
+                            class="search-input"
+                            type="search"
+                            placeholder="Cari challenge..."
+                        >
+
+                        <select
+                            id="admin-challenge-status"
+                            class="search-input"
+                            style="max-width: 180px"
+                        >
+                            <option value="all">Semua status</option>
+                            <option value="active">Aktif</option>
+                            <option value="draft">Draft</option>
+                            <option value="archived">Archived</option>
+                        </select>
+
+                        <select
+                            id="admin-challenge-category"
+                            class="search-input"
+                            style="max-width: 210px"
+                        >
+                            <option value="all">Semua kategori</option>
+                            <option value="learning">Learning & Focus</option>
+                            <option value="creative">Creative & Digital Skills</option>
+                            <option value="healthy">Healthy Habits</option>
+                        </select>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Challenge</th>
+                                    <th>Kategori</th>
+                                    <th>Level</th>
+                                    <th>Verification</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="admin-challenge-table"></tbody>
+                        </table>
+                    </div>
+
+                    <div id="admin-challenge-empty" class="section hidden"></div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div class="toast-root" id="toast-root" aria-live="polite"></div>
+
+    <script defer src="../js/storage.js"></script>
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/auth.js"></script>
+    <script defer src="../js/ui.js"></script>
+    <script defer src="../js/progression.js"></script>
+    <script defer src="../js/admin/challenges.js"></script>
+</body>
+</html>
+```

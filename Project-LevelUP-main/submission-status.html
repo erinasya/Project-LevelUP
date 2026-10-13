@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+    <title>Submission Status | LevelUp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/submission.css">
+</head>
+
+<body data-page="submission-status" data-require-role="user">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">SUBMISSION TRACKER</span>
+                        <h1>Submission Status</h1>
+                        <p>
+                            Ketahui status, hasil pemeriksaan, dan langkah berikutnya untuk setiap submission.
+                        </p>
+                    </div>
+
+                    <a href="progress.html" class="btn btn-ghost">
+                        ← My Progress
+                    </a>
+                </div>
+
+                <div id="submission-status-list" class="flow"></div>
+                <div id="submission-status-empty" class="section hidden"></div>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div
+        class="toast-root"
+        id="toast-root"
+        aria-live="polite"
+    ></div>
+
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/data.js"></script>
+    <script defer src="js/auth.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/progression.js"></script>
+    <script defer src="js/submission-status.js"></script>
+</body>
+</html>

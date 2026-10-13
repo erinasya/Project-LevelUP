@@ -1,0 +1,182 @@
+```html
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#CBE7FF">
+
+    <title>Reward & Achievement Rules | LevelUp</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body data-page="admin-rewards" data-require-role="admin">
+    <div class="app-frame">
+        <div class="app-surface">
+            <header
+                class="topbar"
+                id="site-header"
+                aria-label="Navigasi LevelUp"
+            ></header>
+
+            <aside
+                id="app-sidebar"
+                class="hidden"
+                aria-hidden="true"
+            ></aside>
+
+            <main class="page-content" id="page-content">
+                <div class="page-heading">
+                    <div class="admin-heading">
+                        <div>
+                            <span class="eyebrow">PROGRESSION RULES</span>
+                            <h1>Reward & Achievement Rules</h1>
+                            <p>
+                                Atur XP, milestone, dan unlock agar setiap reward mempunyai dasar yang jelas.
+                            </p>
+                        </div>
+
+                        <span class="admin-marker">ADMIN</span>
+                    </div>
+                </div>
+
+                <section class="grid grid-3">
+                    <article class="card card-blue">
+                        <span class="eyebrow">XP POLICY</span>
+                        <h2>Progress, bukan spam</h2>
+                        <p class="small">
+                            XP diberikan untuk aktivitas valid sesuai aturan. Pengulangan yang tidak memenuhi syarat tidak boleh memberi poin berulang tanpa batas.
+                        </p>
+                    </article>
+
+                    <article class="card card-yellow">
+                        <span class="eyebrow">ACHIEVEMENTS</span>
+                        <h2>Milestone khusus</h2>
+                        <p class="small">
+                            Achievement diberikan berdasarkan kriteria spesifik, tidak selalu bersamaan dengan XP atau unlock.
+                        </p>
+                    </article>
+
+                    <article class="card card-lavender">
+                        <span class="eyebrow">BENEFITS</span>
+                        <h2>Manfaat tersedia</h2>
+                        <p class="small">
+                            Reward eksternal hanya boleh diaktifkan jika memang tersedia dan mempunyai aturan penukaran.
+                        </p>
+                    </article>
+                </section>
+
+                <section class="section grid grid-2">
+                    <article class="card">
+                        <div class="section-head">
+                            <div>
+                                <span class="eyebrow">XP RULES</span>
+                                <h2>Aturan XP demo</h2>
+                            </div>
+                        </div>
+
+                        <form id="xp-rules-form" class="flow">
+                            <div class="field">
+                                <label for="xp-task">Selesaikan task</label>
+                                <input
+                                    id="xp-task"
+                                    type="number"
+                                    min="0"
+                                    value="5"
+                                >
+                            </div>
+
+                            <div class="field">
+                                <label for="xp-challenge">Selesaikan challenge yang valid</label>
+                                <input
+                                    id="xp-challenge"
+                                    type="number"
+                                    min="0"
+                                    value="80"
+                                >
+                            </div>
+
+                            <div class="field">
+                                <label for="xp-stage">Selesaikan Growth Path stage</label>
+                                <input
+                                    id="xp-stage"
+                                    type="number"
+                                    min="0"
+                                    value="25"
+                                >
+                            </div>
+
+                            <button class="btn btn-primary" type="submit">
+                                Simpan Aturan Demo
+                            </button>
+                        </form>
+                    </article>
+
+                    <article class="card">
+                        <span class="eyebrow">UNLOCK POLICY</span>
+                        <h2>Prasyarat & kelayakan</h2>
+                        <p>
+                            Stage yang berorientasi keterampilan harus menggunakan prasyarat yang relevan, bukan XP saja.
+                        </p>
+
+                        <div class="notice">
+                            Perubahan aturan berlaku sebagai konfigurasi demo dan tidak otomatis mengubah riwayat achievement yang sudah diperoleh.
+                        </div>
+
+                        <a
+                            href="growth-paths.html"
+                            class="btn btn-secondary"
+                            style="margin-top: 16px"
+                        >
+                            Atur Growth Path ↗
+                        </a>
+                    </article>
+                </section>
+
+                <section class="section card">
+                    <div class="section-head">
+                        <div>
+                            <span class="eyebrow">ACHIEVEMENT CATALOG</span>
+                            <h2>Katalog achievement</h2>
+                        </div>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Achievement</th>
+                                    <th>Kriteria</th>
+                                    <th>XP</th>
+                                    <th>Unlock</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="reward-achievement-table"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="app-footer"></footer>
+        </div>
+
+        <div class="app-main-footer">
+            LevelUp · Growth at your own pace.
+        </div>
+    </div>
+
+    <div class="toast-root" id="toast-root" aria-live="polite"></div>
+
+    <script defer src="../js/storage.js"></script>
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/auth.js"></script>
+    <script defer src="../js/ui.js"></script>
+    <script defer src="../js/progression.js"></script>
+    <script defer src="../js/admin/rewards.js"></script>
+</body>
+</html>
+```

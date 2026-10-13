@@ -1,0 +1,47 @@
+.challenge-detail-hero {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 20px;
+    align-items: center;
+    background: linear-gradient(115deg, #E8F4FF, #FFF1E7);
+    padding: 27px;
+}
+
+.challenge-detail-hero img {
+    max-height: 190px;
+    justify-self: end;
+}
+
+.criteria-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.criteria-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 12px;
+}
+
+.criteria-row .check {
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+    background: #E4F4E7;
+    border-radius: 8px;
+    color: #33754D;
+    flex-shrink: 0;
+}
+
+@media (max-width: 780px) {
+    .challenge-detail-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .challenge-detail-hero img {
+        display: none;
+    }
+}
